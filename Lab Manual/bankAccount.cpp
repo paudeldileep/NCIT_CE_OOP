@@ -68,7 +68,7 @@ void person::display(int n){
 
 
 int main(){
-	person p[5];
+	person p[10];
 
    int option,choice,j,flag;
 
