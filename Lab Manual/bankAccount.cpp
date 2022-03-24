@@ -26,8 +26,6 @@ person::person(){
 	an=0;
    strcpy(name,"");
    balance=0;
-
-
 }
 
 void person::openAcc(int n){
@@ -73,8 +71,9 @@ int main(){
    int option,choice,j,flag;
 
    do{
-
+      cout<<"--Available options--"<<endl;
    	cout<<"1.open account 2.deposit 3.withdraw 4.display 5.exit"<<endl;
+      cout<<"enter your choice:";
       cin>>option;
 
   	 switch(option){
@@ -124,7 +123,7 @@ int main(){
                      j++;
                }
                if(flag!=1){
-                    cout<<"The account couldn't be found!"<<endl;
+                    cout<<"Error: The account couldn't be found!"<<endl;
 
                }
                  break;
@@ -145,7 +144,7 @@ int main(){
                      j++;
                }
                if(flag!=1){
-                    cout<<"The account couldn't found!"<<endl;
+                    cout<<"Error :The account couldn't found!"<<endl;
 
                }
    /*
@@ -164,13 +163,14 @@ int main(){
                   break;
        case 5:
        	exit(0);
-       case 6:
-       			cout<<"invalid choice,enter a valid choice:"<<endl;
+       default:
+       			cout<<"Error: invalid choice,enter a valid choice:"<<endl;
+                break;
 
 
     }
    }
-   while(option!=5 && option<7);
+   while(option);
    //getch();
    return 0;
 
