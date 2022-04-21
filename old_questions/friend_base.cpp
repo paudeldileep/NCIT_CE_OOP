@@ -20,7 +20,7 @@ class Base{
                 cin>>v2[i];
             }
         }
-        void display(){
+        void displayVectors(){
             cout<<"v1=[";
             for(int i=0;i<3;i++){
                 cout<<v1[i]<<" ";
@@ -34,7 +34,7 @@ class Base{
             cout<<"]"<<endl;
         }
 
-    friend void displaySum(Base b);
+    friend void display(Base b);
 };
 
 class Derived:public Base{
@@ -47,7 +47,7 @@ class Derived:public Base{
     }
 };
 
-void displaySum(Base b){
+void display(Base b){
     cout<<"sum=[";
     for(int i=0;i<3;i++){
         cout<<b.sum[i]<<" ";
@@ -59,7 +59,7 @@ int main(){
     Derived d;
     d.getVectors();
     d.addVector();
-    d.display();
-    displaySum(d);
+    d.displayVectors();
+    display(d);
     return 0;
 }
